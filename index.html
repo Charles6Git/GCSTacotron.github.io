@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HP-Tacotron2 Audio Samples</title>
+  <style>
+body {
+  margin:0;
+  padding:10px 30px;
+  background: #fff;
+  color: #111;
+  font-size: 17px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  width: 30%;
+  vertical-align: text-top;
+}
+</style>
+ 
+
+</head>
+<center><h1>End-to-End Code-Switched TTS with Graph Representation of Prosody Boundary </h1></center>
+<body style="width: 94%; margin: 0 auto">
+	<h3 style="text-align: center">Abstract</h3>
+<div style="width: 92%; margin: 0 auto">
+  <p>
+  	&nbsp;&nbsp;&nbsp;&nbsp;Neural Text-to-Speech (TTS) technology has made considerable progress, capable of synthesizing natural speech that is close to human voice. Moreover, the application of Graph Neural Network on TTS opens up an alternative way of prosody modeling. However, the prominent TTS models only have a good performance on monolingual. As international exchanges become closer and closer, there are many scenarios that require cross-lingual TTS. When applied them to code-switched speech synthesis, they often synthesize unacceptable results. In this paper, we proposed a code-switched TTS model, GCS-Tacotron, which can synthesize Mandarin-English code-switched speech by adding explicit phoneme-level language embedding, and uses GNN to model semantic and prosodic information in the spatial domain according to the hierarchical prosodic boundary of the text. And, without affecting the sound quality, the structure of the Graph Encoder in GCS-Tacotron is further simplified. The model is trained on available monolingual corpus.
+ The experiments show that the proposed model can not only synthesize natural code-switched speech, but also can synthesize speech with a mixture of Mandarin and English-letter. 
+  </p>
+  <p><b>Intex Term</b> —— text-to-speech, code-switched, graph neural network</p>
+</div>
+<div style="width: 100%; margin: 0 auto; margin-top: 100px">
+	<img src="./img/img1.png"  title="HP-Tacotron2 model" alt="HP-Tacotron2 model" style="margin-left: 16%; width:70%" >
+	
+</div>
+
+	<h1 style="margin-top: 150px">Audio Sapmles</h1>
+	
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">在#1狱中#3，张明宝#1悔恨#1交加#2，写了#1一份#1忏悔书#4。</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">GCS-Tacotron</th>
+	  <th style="text-align: center">Simplified Encoder</th>
+	  
+	  </tr></thead><tbody>
+	  <tr>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/010000.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/010000.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/010000.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/010000.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/010000.wav" autoplay/></audio></td>
+	  
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">该车#1将#1三人#1撞倒后#3，在#1大雾中#1逃窜#4。</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">GCS-Tacotron</th>
+	  <th style="text-align: center">Simplified Encoder</th>
+	  </tr></thead><tbody>
+	  <tr>
+		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009990.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009990.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009990.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009990.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009990.wav" autoplay/></audio></td>
+		
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">因为#3，我们#1所#1发出的#1力量#2必会因#1难度#1加大#1而#1减弱#4</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">GCS-Tacotron</th>
+	  <th style="text-align: center">Simplified Encoder</th>
+	  </tr></thead><tbody>
+	  <tr>
+		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009960.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009960.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009960.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009960.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009960.wav" autoplay/></audio></td>
+		
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">据悉#3，奥巴马#1一家人#2对#1这座#1“冬季#1白宫#2”极为#1满意#4。</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">GCS-Tacotron</th>
+	  <th style="text-align: center">Simplified Encoder</th>
+	  </tr></thead><tbody>
+	  <tr>
+		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009970.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009970.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009970.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009970.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009970.wav" autoplay/></audio></td>
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">傍晚#2七个#1小人#1回来了#3，白雪#1公主说#3：你们#1就是#1我#1命中的#1七个#1小矮人吧#4。</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Baseline</th>
+	  <th style="text-align: center">Baseline-prosody</th>
+	  <th style="text-align: center">FP-Tacotron2</th>
+	  <th style="text-align: center">PP-Tacotron2</th>
+	  <th style="text-align: center">HP-Tacotron2</th>
+	  
+	  </tr></thead><tbody>
+	  <tr>
+		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009920.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009920.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009920.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009920.wav" autoplay/></audio></td>
+		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009920.wav" autoplay/></audio></td>
+		
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+</body>
+</html>
+
