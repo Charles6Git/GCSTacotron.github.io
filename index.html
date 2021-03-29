@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HP-Tacotron2 Audio Samples</title>
+  <title>GCS-Tacotron Audio Samples</title>
   <style>
 body {
   margin:0;
@@ -25,18 +25,17 @@ img {
  
 
 </head>
-<center><h1>End-to-End Code-Switched TTS with Graph Representation of Prosody Boundary </h1></center>
+<center><h1>GCS-Tacotron: End-to-End Code-Switched TTS with Graph Representation of Prosody Boundary </h1></center>
 <body style="width: 94%; margin: 0 auto">
 	<h3 style="text-align: center">Abstract</h3>
 <div style="width: 92%; margin: 0 auto">
   <p>
-  	&nbsp;&nbsp;&nbsp;&nbsp;Neural Text-to-Speech (TTS) technology has made considerable progress, capable of synthesizing natural speech that is close to human voice. Moreover, the application of Graph Neural Network on TTS opens up an alternative way of prosody modeling. However, the prominent TTS models only have a good performance on monolingual. As international exchanges become closer and closer, there are many scenarios that require cross-lingual TTS. When applied them to code-switched speech synthesis, they often synthesize unacceptable results. In this paper, we proposed a code-switched TTS model, GCS-Tacotron, which can synthesize Mandarin-English code-switched speech by adding explicit phoneme-level language embedding, and uses GNN to model semantic and prosodic information in the spatial domain according to the hierarchical prosodic boundary of the text. And, without affecting the sound quality, the structure of the Graph Encoder in GCS-Tacotron is further simplified. The model is trained on available monolingual corpus.
- The experiments show that the proposed model can not only synthesize natural code-switched speech, but also can synthesize speech with a mixture of Mandarin and English-letter. 
+  	&nbsp;&nbsp;&nbsp;&nbsp;Code-switched text-to-speech (TTS) has attract more and moreattentions in recent years since international communicationhas become more and more popular. One of the challenges of code-switchedTTS is the naturalness and fluency when switching betweendifferent languages.In order to synthesize smooth code-switched speech, we propose a novel code-switched TTSmodel, called GCS-Tacotron. It is a variant of code-switchedTacotron for Mandarin-English mixed-lingual TTS that intro-duces prosodic information via graph neural network (GNN). In GCS-Tacotron, we first extend the prosodic graph for Mandarintext to Mandarin-English mixed-lingual text, then encode theprosodic graph with GNN, and integrate graphical representa-tions of code-switched prosodic information to the model in twoways: one is add a Graph Auxiliary Encoder (GAE), and theother is the simplified Serial Graph Encoder (GAE). The pro-posed models are only trained with available monolingual cor-pora. Experiments show that the proposed models can not onlysynthesize natural code-switched speech, but also can synthe-size speech with a mixture of Mandarin and English-alphabet. 
   </p>
   <p><b>Intex Term</b> —— text-to-speech, code-switched, graph neural network</p>
 </div>
 <div style="width: 100%; margin: 0 auto; margin-top: 100px">
-	<img src="./img/img1.png"  title="HP-Tacotron2 model" alt="HP-Tacotron2 model" style="margin-left: 16%; width:70%" >
+	<img src="./img/demoimg.png"  title="HP-Tacotron2 model" alt="HP-Tacotron2 model" style="margin-left: 16%; width:70%" >
 	
 </div>
 
@@ -48,23 +47,21 @@ img {
 	  </tbody></table>
 	  
 	  <hr>
-	  <p style="font-size: 22px">在#1狱中#3，张明宝#1悔恨#1交加#2，写了#1一份#1忏悔书#4。</p>
+	  <p style="font-size: 22px">它就是把二和三相加，就等于A加B的五次方。</p>
 
 	  <table><thead>
 	  <tr>
 	  <th style="text-align: center">Ground Truth</th>
-	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">CSTTS</th>
 	  <th style="text-align: center">GAE</th>
-	  <th style="text-align: center">GCS-Tacotron</th>
-	  <th style="text-align: center">Simplified Encoder</th>
+	  <th style="text-align: center">SGE</th>
 	  
 	  </tr></thead><tbody>
 	  <tr>
-	  <td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/010000.wav" autoplay/></audio></td>
-	  <td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/010000.wav" autoplay/></audio></td>
-	  <td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/010000.wav"  autoplay/></audio></td>
-	  <td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/010000.wav" autoplay/></audio></td>
-	  <td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/010000.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/gta_5.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_5.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_5.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_5.wav" autoplay/></audio></td>
 	  
 	  </tr>
 	  </tbody></table>
@@ -81,23 +78,22 @@ img {
 	  </tbody></table>
 	  
 	  <hr>
-	  <p style="font-size: 22px">该车#1将#1三人#1撞倒后#3，在#1大雾中#1逃窜#4。</p>
+	  <p style="font-size: 22px">三、积的乘方法则：AB的N次方等于A的N次方乘以B的N次方（N是正整数）。</p>
 
 	  <table><thead>
 	  <tr>
 	  <th style="text-align: center">Ground Truth</th>
-	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">CSTTS</th>
 	  <th style="text-align: center">GAE</th>
-	  <th style="text-align: center">GCS-Tacotron</th>
-	  <th style="text-align: center">Simplified Encoder</th>
+	  <th style="text-align: center">SGE</th>
+	  
 	  </tr></thead><tbody>
 	  <tr>
-		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009990.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009990.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009990.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009990.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009990.wav" autoplay/></audio></td>
-		
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/gta_13.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_13.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_13.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_13.wav" autoplay/></audio></td>
+	  
 	  </tr>
 	  </tbody></table>
 	  
@@ -113,23 +109,22 @@ img {
 	  </tbody></table>
 	  
 	  <hr>
-	  <p style="font-size: 22px">因为#3，我们#1所#1发出的#1力量#2必会因#1难度#1加大#1而#1减弱#4</p>
+	  <p style="font-size: 22px">求三角形ABC各角的度数，第二，在第七十七页中进行教材练习。</p>
 
 	  <table><thead>
 	  <tr>
 	  <th style="text-align: center">Ground Truth</th>
-	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">CSTTS</th>
 	  <th style="text-align: center">GAE</th>
-	  <th style="text-align: center">GCS-Tacotron</th>
-	  <th style="text-align: center">Simplified Encoder</th>
+	  <th style="text-align: center">SGE</th>
+	  
 	  </tr></thead><tbody>
 	  <tr>
-		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009960.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009960.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009960.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009960.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009960.wav" autoplay/></audio></td>
-		
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/gta_40.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_40.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_40.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_40.wav" autoplay/></audio></td>
+	  
 	  </tr>
 	  </tbody></table>
 	  
@@ -145,22 +140,22 @@ img {
 	  </tbody></table>
 	  
 	  <hr>
-	  <p style="font-size: 22px">据悉#3，奥巴马#1一家人#2对#1这座#1“冬季#1白宫#2”极为#1满意#4。</p>
+	  <p style="font-size: 22px">那么解读是这样的，同底数幂相乘，底数不变，指数相加。注意啊，底数可以是多项式或单项式。</p>
 
 	  <table><thead>
 	  <tr>
 	  <th style="text-align: center">Ground Truth</th>
-	  <th style="text-align: center">Code-switched TTS</th>
+	  <th style="text-align: center">CSTTS</th>
 	  <th style="text-align: center">GAE</th>
-	  <th style="text-align: center">GCS-Tacotron</th>
-	  <th style="text-align: center">Simplified Encoder</th>
+	  <th style="text-align: center">SGE</th>
+	  
 	  </tr></thead><tbody>
 	  <tr>
-		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009970.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009970.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009970.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009970.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009970.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/gta_3.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_3.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_3.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_3.wav" autoplay/></audio></td>
+	  
 	  </tr>
 	  </tbody></table>
 	  
@@ -176,24 +171,115 @@ img {
 	  </tbody></table>
 	  
 	  <hr>
-	  <p style="font-size: 22px">傍晚#2七个#1小人#1回来了#3，白雪#1公主说#3：你们#1就是#1我#1命中的#1七个#1小矮人吧#4。</p>
+	  <p style="font-size: 22px">另一项呢，互为相反数，右边是相同的平方，减去相反项的平方。</p>
 
 	  <table><thead>
 	  <tr>
-	  <th style="text-align: center">Baseline</th>
-	  <th style="text-align: center">Baseline-prosody</th>
-	  <th style="text-align: center">FP-Tacotron2</th>
-	  <th style="text-align: center">PP-Tacotron2</th>
-	  <th style="text-align: center">HP-Tacotron2</th>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">CSTTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">SGE</th>
 	  
 	  </tr></thead><tbody>
 	  <tr>
-		<td style="text-align: center"><audio controls="controls" ><source src="./B/wavs/009920.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./C/wavs/009920.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./FP/wavs/009920.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./PP/wavs/009920.wav" autoplay/></audio></td>
-		<td style="text-align: center"><audio controls="controls" ><source src="./HP/wavs/009920.wav" autoplay/></audio></td>
-		
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/GTA_30.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_30.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_30.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_30.wav" autoplay/></audio></td>
+	  
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">在狱中，张明宝悔恨交加，写了一封忏悔书。</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">CSTTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">SGE</th>
+	  
+	  </tr></thead><tbody>
+	  <tr>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GT/wavs/gt_33.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_33.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_33.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_33.wav" autoplay/></audio></td>
+	  
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">但考生普遍认为，试题的怪，多过难</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">CSTTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">SGE</th>
+	  
+	  </tr></thead><tbody>
+	  <tr>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GT/wavs/gt_32.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_32.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_32.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_32.wav" autoplay/></audio></td>
+	  
+	  </tr>
+	  </tbody></table>
+	  
+
+	  <table><thead>
+	    <tr>
+	    
+	    </tbody></table>
+</div>
+<div id="tab">
+	  <table><thead>
+	  <tr>
+	  </tbody></table>
+	  
+	  <hr>
+	  <p style="font-size: 22px">I'm just in charge the receipt.</p>
+
+	  <table><thead>
+	  <tr>
+	  <th style="text-align: center">Ground Truth</th>
+	  <th style="text-align: center">CSTTS</th>
+	  <th style="text-align: center">GAE</th>
+	  <th style="text-align: center">SGE</th>
+	  
+	  </tr></thead><tbody>
+	  <tr>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GTA/wavs/GTA_30.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./CSTTS/wavs/finetune_31.wav" autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./GAE/wavs/finetune_31.wav"  autoplay/></audio></td>
+	  <td style="text-align: center"><audio controls="controls" ><source src="./SGE/wavs/finetune_31.wav" autoplay/></audio></td>
+	  
 	  </tr>
 	  </tbody></table>
 	  
