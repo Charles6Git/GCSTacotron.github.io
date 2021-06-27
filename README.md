@@ -1,2 +1,2 @@
-This is the demos for 《GCS-Tacotron: End-to-End Code-Switched TTS with Graphical Representations of Prosody Boundary》
+This is the demos for 《GCS-Tacotron: Code-Switched TTS with Graphical Representations of Prosody Boundary》
 
